@@ -35,4 +35,8 @@ public class Client {
     @JsonIgnore
     @OneToMany(mappedBy = "client",fetch = FetchType.EAGER)
     private List<Account> accountList;
+
+    public Client(String code) {
+        this.code = code;
+    }
 }
